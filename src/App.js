@@ -15,7 +15,7 @@ function App() {
         href="https://github.com/cjp0421/weather-react"
         alt=""
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Click here to see the code on Github.
       </a>

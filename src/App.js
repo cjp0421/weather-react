@@ -11,6 +11,7 @@ function App() {
         <h1>Hello Weather</h1>
       </header>
       <Search />
+      <br />
       <a
         href="https://github.com/cjp0421/weather-react"
         alt=""

@@ -1,12 +1,11 @@
 import React from "react";
-
-import "./styles.css";
-
 import Search from "./Search";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <header className="App-header">
         <h1>Hello Weather</h1>
       </header>

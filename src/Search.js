@@ -46,7 +46,7 @@ export default function Search() {
   if (results) {
     //The above is short for (results === true)
     return (
-      <div>
+      <div className="searchResults">
         {form}
         <br />
         {weather.city}

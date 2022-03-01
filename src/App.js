@@ -12,14 +12,17 @@ export default function App() {
       </header>
       <Search />
       <br />
-      <a
-        href="https://github.com/cjp0421/weather-react"
-        alt=""
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Click here to see the code on Github.
-      </a>
+      <footer>
+        {" "}
+        <a
+          href="https://github.com/cjp0421/weather-react"
+          alt=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here to see the code on Github.
+        </a>
+      </footer>
     </div>
   );
 }

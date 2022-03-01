@@ -49,10 +49,10 @@ export default function Search() {
       <div className="searchResults">
         {form}
         <br />
-        {weather.city}
         <ul>
-          <li>Temperature: {Math.round(weather.temperature)}</li>
-          <li>Humidity: {weather.humidity}</li>
+          <li>{weather.city}</li>
+          <li>Temperature: {Math.round(weather.temperature)}°C</li>
+          <li>Humidity: {weather.humidity}%</li>
           <li>Wind Speed: {weather.wind}</li>
           <li>
             <img src={weather.icon} alt={weather.description} />

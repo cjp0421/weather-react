@@ -46,23 +46,30 @@ export default function Search() {
   if (results) {
     //The above is short for (results === true)
     return (
-      <div className="Search row">
-        {form}
-        <br />
-        <div className="col-4">
-          <ul className="cityName">
-            <li>{weather.city}</li>
-            <li>
-              <img src={weather.icon} alt={weather.description} />
-            </li>
-          </ul>
+      <div className="Search">
+        <div className="row">
+          {form}
+          <br />
+          <div className="col-6">
+            <ul className="cityName">
+              <li>{weather.city}</li>
+              <li>
+                <img src={weather.icon} alt={weather.description} />
+              </li>
+            </ul>
+          </div>
+          <div className="col-6 currentConditions">
+            <ul>
+              <li>Temperature: {Math.round(weather.temperature)}°C</li>
+              <li>Humidity: {weather.humidity}%</li>
+              <li>Wind Speed: {weather.wind}</li>
+            </ul>
+          </div>
         </div>
-        <div className="col-6 currentConditions">
-          <ul>
-            <li>Temperature: {Math.round(weather.temperature)}°C</li>
-            <li>Humidity: {weather.humidity}%</li>
-            <li>Wind Speed: {weather.wind}</li>
-          </ul>
+
+        <div className="row">
+          Forecast will go here.
+          <div className=""></div>
         </div>
       </div>
     );

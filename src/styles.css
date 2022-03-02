@@ -39,6 +39,7 @@ form {
   margin: 5%;
   padding: 3%;
   box-shadow: 0px 10px 13px -7px #000000;
+  max-width: 85%;
 }
 
 .cityName {
@@ -52,4 +53,10 @@ form {
   margin: 0 auto;
   margin-top: 15%;
   padding-top: 8%;
+}
+
+@media (min-width: 800px) {
+  .App {
+    width: 50%;
+  }
 }

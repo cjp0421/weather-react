@@ -56,20 +56,18 @@ export default function Search() {
                 <img src={weather.icon} alt={weather.description} />
                 {weather.city}
               </li>
-              <li className=""></li>
+              <li>{Math.round(weather.temperature)}°C | ?°F</li>
             </ul>
           </div>
           <div className="col-6 currentConditions">
             <ul>
-              <li>Temperature: {Math.round(weather.temperature)}°C</li>
               <li>Humidity: {weather.humidity}%</li>
               <li>Wind Speed: {weather.wind}</li>
             </ul>
           </div>
         </div>
-
         <div className="row">
-          Forecast will go here.
+          <p>Forecast will go here.</p>
           <div className=""></div>
         </div>
       </div>

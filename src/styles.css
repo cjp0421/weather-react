@@ -17,12 +17,19 @@ li {
 }
 
 h1 {
-  background-color: rgba(255, 255, 240, 0.7);
+  background-color: rgba(113, 220, 247, 0.3);
+  border-radius: 48px;
   width: 40%;
   display: block;
   margin: 0 auto;
-  padding: 15%;
-  margin-top: 5%;
+  padding: 2%;
+}
+
+form {
+  display: block;
+  box-shadow: 0px 10px 10px -7px #000000;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 .App {
@@ -30,5 +37,19 @@ h1 {
   text-align: center;
   border: 1px solid gray;
   margin: 5%;
-  padding-bottom: 3%;
+  padding: 3%;
+  box-shadow: 0px 10px 13px -7px #000000;
+}
+
+.cityName {
+  margin-top: 20%;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.currentConditions {
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+  padding-top: 8%;
 }

@@ -46,18 +46,24 @@ export default function Search() {
   if (results) {
     //The above is short for (results === true)
     return (
-      <div className="searchResults">
+      <div className="Search row">
         {form}
         <br />
-        <ul>
-          <li>{weather.city}</li>
-          <li>Temperature: {Math.round(weather.temperature)}°C</li>
-          <li>Humidity: {weather.humidity}%</li>
-          <li>Wind Speed: {weather.wind}</li>
-          <li>
-            <img src={weather.icon} alt={weather.description} />
-          </li>
-        </ul>
+        <div className="col-4">
+          <ul className="cityName">
+            <li>{weather.city}</li>
+            <li>
+              <img src={weather.icon} alt={weather.description} />
+            </li>
+          </ul>
+        </div>
+        <div className="col-6 currentConditions">
+          <ul>
+            <li>Temperature: {Math.round(weather.temperature)}°C</li>
+            <li>Humidity: {weather.humidity}%</li>
+            <li>Wind Speed: {weather.wind}</li>
+          </ul>
+        </div>
       </div>
     );
   } else {

@@ -14,6 +14,11 @@ code {
 
 li {
   list-style: none;
+  padding: 0;
+}
+
+ul {
+  padding: 0%;
 }
 
 h1 {
@@ -36,14 +41,14 @@ form {
   font-family: sans-serif;
   text-align: center;
   border: 1px solid gray;
-  margin: 5%;
+  margin: 4%;
   padding: 3%;
   box-shadow: 0px 10px 13px -7px #000000;
-  max-width: 85%;
+  width: 85%;
+  max-width: 65%;
 }
 
 .cityName {
-  margin-top: 20%;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -53,4 +58,12 @@ form {
   margin: 0 auto;
   margin-top: 15%;
   padding-top: 8%;
+}
+
+.cityAndIcon {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: end;
+  padding-top: 7.5%;
 }

@@ -51,11 +51,12 @@ export default function Search() {
           {form}
           <br />
           <div className="col-6">
-            <ul className="cityName">
-              <li>{weather.city}</li>
-              <li>
+            <ul className="row cityAndIcon">
+              <li className="cityName">
                 <img src={weather.icon} alt={weather.description} />
+                {weather.city}
               </li>
+              <li className=""></li>
             </ul>
           </div>
           <div className="col-6 currentConditions">

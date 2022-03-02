@@ -54,9 +54,3 @@ form {
   margin-top: 15%;
   padding-top: 8%;
 }
-
-@media (min-width: 800px) {
-  .App {
-    width: 50%;
-  }
-}

@@ -14,6 +14,7 @@ export default function App() {
       <footer>
         {" "}
         <a
+          className="gitLink"
           href="https://github.com/cjp0421/weather-react"
           alt=""
           target="_blank"

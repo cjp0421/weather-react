@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./styles.css";
 
 export default function Search() {
@@ -11,6 +12,7 @@ export default function Search() {
     setResults(true);
     setWeather({
       city: response.data.name,
+      date: new Date(response.data.weather.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -49,6 +51,7 @@ export default function Search() {
       <div className="Search">
         {form}
         <br />
+        <FormattedDate day={weather.date} />
         <div className="bgOverlay row">
           <div className=" col-6">
             <ul className="row cityAndIcon">

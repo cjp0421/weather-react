@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
 export default function Search() {
@@ -8,7 +9,7 @@ export default function Search() {
   const [results, setResults] = useState(false);
   const [weather, setWeather] = useState({});
 
-  function displayWeather(response) {
+  let displayWeather = (response) => {
     setWeather({
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
@@ -19,7 +20,7 @@ export default function Search() {
       descripition: response.data.weather[0].description,
     });
     setResults(true);
-  }
+  };
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -52,33 +53,7 @@ export default function Search() {
         {form}
         <br />
         <FormattedDate date={weather.date} />
-        <div className="bgOverlay row">
-          <div className=" col-6">
-            <ul className="row cityAndIcon">
-              <li className="col-12 cityName">
-                <img
-                  className="weatherIcon"
-                  src={weather.icon}
-                  alt={weather.description}
-                />
-                {weather.city}
-              </li>
-              <li className="col-12">
-                {Math.round(weather.temperature)}°C | ?°F
-              </li>
-            </ul>
-          </div>
-          <div className="col-6 currentConditions">
-            <ul>
-              <li>Humidity: {weather.humidity}%</li>
-              <li>Wind Speed: {weather.wind}</li>
-            </ul>
-          </div>
-        </div>
-        <div className="bgOverlay row">
-          <p>Forecast will go here.</p>
-          <div className=""></div>
-        </div>
+        <WeatherInfo data={weather} />
       </div>
     );
   } else {

@@ -5,7 +5,8 @@ import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
 export default function Search() {
-  const [city, setCity] = useState("");
+  let defaultCity = "Saint Louis";
+  const [city, setCity] = useState(defaultCity);
   const [results, setResults] = useState(false);
   const [weather, setWeather] = useState({});
 
@@ -58,5 +59,6 @@ export default function Search() {
     );
   } else {
     return form;
+    //could enter the default city stuff here to make it the one that appears on load...
   }
 }

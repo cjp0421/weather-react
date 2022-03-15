@@ -9,16 +9,16 @@ export default function Search() {
   const [weather, setWeather] = useState({});
 
   function displayWeather(response) {
-    setResults(true);
     setWeather({
       city: response.data.name,
-      date: new Date(response.data.weather.dt * 1000),
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       descripition: response.data.weather[0].description,
     });
+    setResults(true);
   }
 
   function handleSubmit(event) {
@@ -51,7 +51,7 @@ export default function Search() {
       <div className="Search">
         {form}
         <br />
-        <FormattedDate day={weather.date} />
+        <FormattedDate date={weather.date} />
         <div className="bgOverlay row">
           <div className=" col-6">
             <ul className="row cityAndIcon">

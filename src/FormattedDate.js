@@ -14,11 +14,11 @@ export default function FormattedDate(results) {
   let day = days[results.date.getDay()];
   let hours = results.date.getHours();
   let minutes = results.date.getMinutes();
-  let amPm = "am";
+
   return (
     <div>
       <h2>
-        {day} {hours}:{minutes} {amPm}
+        {day} {hours}:{minutes}
       </h2>
     </div>
   );

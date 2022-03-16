@@ -79,3 +79,17 @@ form {
   margin: 0 auto;
   margin-top: 10%;
 }
+
+.unit {
+  color: black;
+}
+
+.unit a {
+  text-decoration: none;
+  color: blue;
+}
+
+.unit a:active,
+a:hover {
+  text-decoration: underline;
+}

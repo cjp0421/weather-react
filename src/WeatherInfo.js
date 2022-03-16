@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 import "./styles.css";
 
@@ -13,7 +14,7 @@ export default function WeatherInfo(weather) {
               <span className="float-left"> {weather.data.city} </span>
             </li>
             <li className="col-12">
-              {Math.round(weather.data.temperature)}°C | ?°F
+              <WeatherTemperature celsius={weather.data.temperature} />
             </li>
           </ul>
         </div>

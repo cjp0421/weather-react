@@ -10,9 +10,7 @@ export default function WeatherInfo(weather) {
         <div className=" col-6">
           <ul className="row cityAndIcon">
             <li className="col-12 cityName">
-              <WeatherIcon code={weather.data.icon} />
-
-              {weather.data.city}
+              <span className="float-left"> {weather.data.city} </span>
             </li>
             <li className="col-12">
               {Math.round(weather.data.temperature)}°C | ?°F
@@ -21,6 +19,9 @@ export default function WeatherInfo(weather) {
         </div>
         <div className="col-6 currentConditions">
           <ul>
+            <li>
+              <WeatherIcon code={weather.data.icon} />
+            </li>
             <li>Humidity: {weather.data.humidity}%</li>
             <li>Wind Speed: {weather.data.wind}</li>
           </ul>

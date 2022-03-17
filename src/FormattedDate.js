@@ -13,7 +13,8 @@ export default function FormattedDate(results) {
 
   let day = days[results.date.getDay()];
   let hours = results.date.getHours();
-  let minutes = results.date.getMinutes();
+  let minutes =
+    (results.date.getMinutes() < 10 ? "0" : "") + results.date.getMinutes();
 
   return (
     <div>

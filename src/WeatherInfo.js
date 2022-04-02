@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 import "./styles.css";
 
@@ -29,7 +30,9 @@ export default function WeatherInfo(weather) {
         </div>
       </div>
       <div className="bgOverlay row">
-        <p>Forecast will go here.</p>
+        <p>
+          <WeatherForecast />
+        </p>
         <div className=""></div>
       </div>
     </div>

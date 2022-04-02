@@ -6,21 +6,13 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
-  //let [forcast, setForecast] = useState(null);
+  let [forecast, setForecast] = useState(null);
   function handleResponse(response) {
-    console.log(response.data.daily);
+    setForecast(response.data.daily);
     setLoaded(true);
   }
 
   if (loaded) {
-    let apiKey = `3a94f3778290bfeee61278505dbbe51d`;
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
-    return null;
-  } else {
     return (
       <div className="WeatherForecast">
         <div className="row">
@@ -30,13 +22,25 @@ export default function WeatherForecast(props) {
               <WeatherIcon code="01d" size={32} />
             </div>
             <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">19°</span>
-              <span className="WeatherForecast-temperature-min">10°</span>
+              <span className="WeatherForecast-temperature-max">
+                {forecast[0].temp.max}°
+              </span>
+              <span className="WeatherForecast-temperature-min">
+                {forecast[0].temp.min}°
+              </span>
             </div>
           </div>
         </div>
       </div>
     );
+  } else {
+    let apiKey = `3a94f3778290bfeee61278505dbbe51d`;
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return null;
   }
 }
 

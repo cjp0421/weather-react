@@ -1,7 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
-import WeatherForecast from "./WeatherForecast";
 
 import "./styles.css";
 
@@ -22,18 +21,12 @@ export default function WeatherInfo(weather) {
         <div className="col-6 currentConditions">
           <ul>
             <li>
-              <WeatherIcon code={weather.data.icon} />
+              <WeatherIcon code={weather.data.icon} size={54} />
             </li>
             <li>Humidity: {weather.data.humidity}%</li>
             <li>Wind Speed: {weather.data.wind}</li>
           </ul>
         </div>
-      </div>
-      <div className="bgOverlay row">
-        <p>
-          <WeatherForecast />
-        </p>
-        <div className=""></div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./styles.css";
 
 export default function Search() {
@@ -13,6 +14,7 @@ export default function Search() {
   let displayWeather = (response) => {
     setWeather({
       city: response.data.name,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
@@ -55,6 +57,11 @@ export default function Search() {
         <br />
         <FormattedDate date={weather.date} />
         <WeatherInfo data={weather} />
+        <div className="bgOverlay row">
+          <p>
+            <WeatherForecast coordinates={weather.coordinates} />
+          </p>
+        </div>
       </div>
     );
   } else {

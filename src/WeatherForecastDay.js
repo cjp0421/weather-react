@@ -5,7 +5,7 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecastDay(props) {
   return (
-    <div>
+    <div className="WeatherForecastDay">
       <div className="WeatherForecast-day">{props.forecast[0].temp.dt}</div>
       <div>
         <WeatherIcon code={props.forecast[0].weather[0].icon} size={32} />

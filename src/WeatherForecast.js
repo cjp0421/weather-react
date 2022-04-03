@@ -1,4 +1,4 @@
-import { axios } from "axios";
+import axios from "axios";
 import React, { useState } from "react";
 import "./styles.css";
 import "./WeatherForecast.css";
@@ -18,7 +18,7 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <WeatherForecastDay code={forecast} />
+            <WeatherForecastDay forecast={forecast} />
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function WeatherInfo(weather) {
               <WeatherIcon code={weather.data.icon} size={54} />
             </li>
             <li>Humidity: {weather.data.humidity}%</li>
-            <li>Wind Speed: {weather.data.wind}</li>
+            <li>Wind Speed: {weather.data.wind}mph</li>
           </ul>
         </div>
       </div>

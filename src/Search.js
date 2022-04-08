@@ -58,9 +58,9 @@ export default function Search() {
         <FormattedDate date={weather.date} />
         <WeatherInfo data={weather} />
         <div className="bgOverlay row">
-          <p>
+          <div>
             <WeatherForecast coordinates={weather.coordinates} />
-          </p>
+          </div>
         </div>
       </div>
     );

@@ -18,7 +18,8 @@ ul {
 h1 {
   background-color: rgba(113, 220, 247, 0.8);
   border-radius: 40px;
-  width: 45%;
+  width: 40%;
+  max-width: 42%;
   display: block;
   margin: 0 auto;
   padding: 2%;
@@ -43,12 +44,11 @@ p {
   text-align: center;
   border: 1px solid gray;
   display: block;
+  width: fit-content;
   margin-top: 4%;
   margin: 0 auto;
   padding: 3%;
   box-shadow: 0px 10px 13px -7px #000000;
-  width: 70%;
-  max-width: 79%;
   background-image: url("https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_960_720.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -89,18 +89,29 @@ p {
   display: block;
   margin: 0 auto;
   margin-top: 10%;
+  max-width: 610px;
+}
+
+.App a {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.App a:hover {
+  text-decoration: underline;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .unit {
   color: black;
-}
-
-.unit a {
-  text-decoration: none;
-  color: blue;
+  font-weight: 100;
+  text-decoration: underline;
+  font-size: xx-small;
 }
 
 .unit a:active,
 a:hover {
-  text-decoration: underline;
+  color: black;
 }

@@ -34,6 +34,11 @@ form {
   margin: 0 auto;
 }
 
+p {
+  font-style: italic;
+  font-weight: 150;
+}
+
 .App {
   text-align: center;
   border: 1px solid gray;

@@ -15,11 +15,14 @@ export default function FormattedDate(results) {
   let hours = results.date.getHours();
   let minutes =
     (results.date.getMinutes() < 10 ? "0" : "") + results.date.getMinutes();
+  let amPm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12 || 12;
 
   return (
     <div>
       <p>
         Last updated: {day}, {hours}:{minutes}
+        {amPm}
       </p>
     </div>
   );

@@ -44,21 +44,20 @@ p {
   text-align: center;
   border: 1px solid gray;
   display: block;
-  width: fit-content;
   margin-top: 4%;
   margin: 0 auto;
-  padding: 3%;
   box-shadow: 0px 10px 13px -7px #000000;
   background-image: url("https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_960_720.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  max-width: 750px;
 }
 
 .cityName {
   font-weight: 700;
   font-size: 2.5rem;
-  padding-top: 12%;
+  padding-top: 11%;
 }
 
 .currentConditions {
@@ -79,6 +78,8 @@ p {
 
 .bgOverlay {
   background-color: rgba(255, 255, 255, 0.8);
+  padding: 0px;
+  width: fill;
 }
 
 .gitLink {
@@ -89,7 +90,6 @@ p {
   display: block;
   margin: 0 auto;
   margin-top: 10%;
-  max-width: 610px;
 }
 
 .App a {

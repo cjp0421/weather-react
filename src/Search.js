@@ -55,9 +55,13 @@ export default function Search() {
       <div className="Search">
         {form}
         <br />
-        <FormattedDate date={weather.date} />
-        <WeatherInfo data={weather} />
+        <div>
+          <WeatherInfo data={weather} />
+        </div>
         <div className="bgOverlay row">
+          <div>
+            <FormattedDate date={weather.date} />
+          </div>
           <div>
             <WeatherForecast coordinates={weather.coordinates} />
           </div>

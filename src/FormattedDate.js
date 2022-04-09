@@ -18,9 +18,9 @@ export default function FormattedDate(results) {
 
   return (
     <div>
-      <h2>
-        {day} {hours}:{minutes}
-      </h2>
+      <p>
+        Last updated: {day}, {hours}:{minutes}
+      </p>
     </div>
   );
 }

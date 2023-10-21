@@ -43,6 +43,7 @@ export default function Search() {
           type="search"
           placeholder="Enter a city..."
           onChange={updateCity}
+
         />
         <input type="submit" value="Search" />
       </form>
@@ -69,6 +70,7 @@ export default function Search() {
       </div>
     );
   } else {
+
     return form;
     //could enter the default city stuff here to make it the one that appears on load...
   }
